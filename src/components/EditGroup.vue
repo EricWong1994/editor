@@ -62,6 +62,8 @@ export default defineComponent({
       allNormalProps.push('position')
       // 计算每一个组件的独特属性，也就是把通用属性都去掉以后的属性
       const speicalProps = difference(Object.keys(props.props), allNormalProps)
+      // TODO: error
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
       currentKey.value = '基本属性'
       return [
         {
